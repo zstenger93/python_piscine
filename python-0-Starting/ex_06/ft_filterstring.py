@@ -21,8 +21,8 @@ def main():
         if not isinstance(text, str) or not isinstance(n, int):
             raise AssertionError("Invalid argument types.")
 
-        is_word_longer = lambda word: len(word) > n
-        filtered_words = list(ft_filter(is_word_longer, text.split()))
+        filtered_words = \
+            list(ft_filter(lambda word: len(word) > n, text.split()))
 
         print(filtered_words)
 
