@@ -14,9 +14,9 @@ try:
             exit()
         number = int(sys.argv[1])
     except ValueError:
-        raise AssertionError("argument is not an integer")
+        raise AssertionError("Argument is not an integer")
     if len(sys.argv) != 2:
-        raise AssertionError("incorrect number of arguments")
+        raise AssertionError("Incorrect number of arguments")
 
     result = check_odd_or_even(number)
     print(result)
