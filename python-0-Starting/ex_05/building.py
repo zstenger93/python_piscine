@@ -2,6 +2,17 @@ import sys
 
 
 def analyze_text(text):
+    """
+    text (input string): The text to analyze
+
+    Prints the following information:
+    1. The number of characters in the text
+    2. The number of upper case letters
+    3. The number of lower case letters
+    4. The number of punctuation marks
+    5. The number of spaces
+    6. The number of digits
+    """
     total_chars = len(text)
     upper_count = sum(1 for char in text if 'A' <= char <= 'Z')
     lower_count = sum(1 for char in text if 'a' <= char <= 'z')
@@ -19,14 +30,20 @@ def analyze_text(text):
 
 
 def main():
+    """
+    Analyzes the given text and prints information about its char composition.
+
+    Asks for input if no argument is given:
+
+    raises AssertionError: Too many arguments provided
+    """
     try:
         if len(sys.argv) < 2:
             print("What is the text to count?")
             exit()
         elif len(sys.argv) > 2:
             raise AssertionError("Too many arguments provided")
-        text = sys.argv[1]
-        analyze_text(text)
+        analyze_text(sys.argv[1])
     except AssertionError as error:
         print(AssertionError.__name__ + ":", error)
 
