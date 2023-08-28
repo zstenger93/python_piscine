@@ -10,6 +10,8 @@ def check_odd_or_even(number):
 
 try:
     try:
+        if len(sys.argv) < 2:
+            exit()
         number = int(sys.argv[1])
     except ValueError:
         raise AssertionError("argument is not an integer")
