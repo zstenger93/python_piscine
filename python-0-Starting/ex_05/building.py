@@ -14,12 +14,12 @@ def analyze_text(text):
     6. The number of digits
     """
     total_chars = len(text)
-    upper_count = sum(1 for char in text if 'A' <= char <= 'Z')
-    lower_count = sum(1 for char in text if 'a' <= char <= 'z')
+    upper_count = sum(1 for char in text if char.isupper())
+    lower_count = sum(1 for char in text if char.islower())
     punctuation_characters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     punctuation_cnt = sum(1 for char in text if char in punctuation_characters)
-    space_count = sum(1 for char in text if char == ' ')
-    digit_count = sum(1 for char in text if '0' <= char <= '9')
+    space_count = sum(1 for char in text if char.isspace())
+    digit_count = sum(1 for char in text if char.isdigit())
 
     print(f"The text contains {total_chars} characters:")
     print(f"{upper_count} upper letters")
@@ -39,11 +39,16 @@ def main():
     """
     try:
         if len(sys.argv) < 2:
-            print("What is the text to count?")
-            exit()
+            try:
+                s = input("What is the text to count?\n")
+                s += "\n"
+            except EOFError:
+                pass
+        elif len(sys.argv) == 2:
+            s = sys.argv[1]
         elif len(sys.argv) > 2:
             raise AssertionError("Too many arguments provided")
-        analyze_text(sys.argv[1])
+        analyze_text(s)
     except AssertionError as error:
         print(AssertionError.__name__ + ":", error)
 
