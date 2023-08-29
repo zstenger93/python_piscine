@@ -5,6 +5,33 @@ import numpy as np
 import sys
 import os
 
+def print_rows_firstelem(arr, int):
+    count = 0
+    for row in arr:
+        count += 1
+    length = count
+    count = 0
+    for row in arr:
+        if count == 0:
+            if int == 1:
+                print("[[[", row[0], "]", sep="")
+            else:
+                print("[[", row[0], sep="")
+        if count > 0 and count < 3 or count > length - 4:
+            if int == 1:
+                if count == length - 1:
+                    print("  [" ,row[0], "]]]", sep="")
+                elif count < length - 1:
+                    print("  [" ,row[0], "]", sep="")
+            else:
+                if count == length - 1:
+                    print("  " ,row[0], "]]", sep="")
+                else:
+                    print("  " ,row[0], sep="")
+        if count == 2:
+            print("  ...")
+        count += 1
+
 
 def main():
     try:
@@ -17,7 +44,7 @@ def main():
         if image is None:
             raise AssertionError("Failed to load image.")
 
-        print(ft_load(path))
+        print_rows_firstelem(ft_load(path), 0)
         image.show()
 
         zoomed_image = image.crop((400, 100, 800, 600))
@@ -25,7 +52,8 @@ def main():
         print(f"New shape after cropping: {zoomed_image.size}")
 
         grayscale_image = zoomed_image.convert("L")
-        print(np.array(grayscale_image))
+        grayscale_image.show()
+        print_rows_firstelem(np.array(grayscale_image), 1)
 
         plt.imshow(zoomed_image)
         plt.title("Zoomed Image")
