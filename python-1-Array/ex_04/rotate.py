@@ -21,14 +21,14 @@ def print_rows_firstelem(arr, int):
         if count > 0 and count < 3 or count > length - 4:
             if int == 1:
                 if count == length - 1:
-                    print("  [" ,row[0], "]]]", sep="")
+                    print("  [", row[0], "]]]", sep="")
                 elif count < length - 1:
-                    print("  [" ,row[0], "]", sep="")
+                    print("  [", row[0], "]", sep="")
             else:
                 if count == length - 1:
-                    print("  " ,row[0], "]]", sep="")
+                    print("  ", row[0], "]]", sep="")
                 else:
-                    print("  " ,row[0], sep="")
+                    print("  ", row[0], sep="")
         if count == 2:
             print("  ...")
         count += 1
@@ -69,8 +69,9 @@ def main():
         image.show()
 
         square_crop = crop_image(image)
-        print_rows_firstelem(np.array(square_crop.convert("L")), 1)
         square_crop.save("square_crop.jpg")
+        ft_load("square_crop.jpg")
+        print_rows_firstelem(np.array(square_crop.convert("L")), 1)
 
         transposed_image = transpose_image(square_crop)
         transposed_image.show()
