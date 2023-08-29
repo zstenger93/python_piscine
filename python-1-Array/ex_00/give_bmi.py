@@ -46,6 +46,8 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         each BMI value is above the limit.
     """
     try:
+        if not isinstance(bmi, list) or not isinstance(limit, list):
+            raise TypeError("Height and weight must be provided as lists.")
         if not isinstance(limit, int):
             raise TypeError("Limit must be an integer.")
         above_limit = []
