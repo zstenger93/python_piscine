@@ -40,9 +40,12 @@ Part 2:
 Create a program that accepts two arguments: a string(S), and an integer(N). The program should output a list of words from S that have a length greater than N.
 
 • Words are separated from each other by space characters.
+
 • Strings do not contain any special characters. (Punctuation or invisible)
+
 • The program must contain at least one list comprehension expression and one
 lambda.
+
 • If the number of argument is different from 2, or if the type of any argument is wrong,
 the program prints an AssertionError.
 
@@ -51,8 +54,11 @@ the program prints an AssertionError.
 Make a program that takes a string as an argument and encodes it into Morse Code.
 
 • The program supports space and alphanumeric characters
+
 • An alphanumeric character is represented by dots . and dashes -
+
 • Complete morse characters are separated by a single space
+
 • A space character is represented by a slash /
 
 You must use a dictionary to store your morse code.
@@ -98,8 +104,11 @@ Create a program that should load the image "animal.jpeg", print some informatio
 about it and display it after "zooming".
 
 • The size in pixel on both X and Y axis
+
 • The number of channel
+
 • The pixel content of the image.
+
 • Display the scale on the x and y axis on the image
 
 If anything went wrong, the program must not stop abruptly and handle any error
@@ -118,10 +127,15 @@ while keeping the image shape the same.
 
 You have some restriction operators for each function: (you can only use those given,
 you don’t have to use them all)
+
 • invert: =, +, -, *
+
 • red: =, *
+
 • green: =, -
+
 • blue: =
+
 • grey: =, /
 
 
