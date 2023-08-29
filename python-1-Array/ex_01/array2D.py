@@ -12,6 +12,19 @@ def slice_me(family: list, start: int, end: int) -> list:
 
     Returns:
         list: Truncated version of the array.
+    My shape:
+        Calculates the shape of the original family array
+        using NumPy's np.array() function and then retrieves its
+        shape using the .shape attribute. The shape of a 2D array is
+        a tuple representing the number of rows and columns.
+        This line prints the shape of the original array.
+    New shape:
+        Calculates the shape of the truncated array.
+        It first creates a NumPy array from the family list,
+        then slices it from the start index to the end+1 index.
+        The .shape attribute is used to retrieve the shape of the
+        truncated array, which represents the number of rows and
+        columns after the truncation.
     """
     try:
         if not isinstance(family, list) \
