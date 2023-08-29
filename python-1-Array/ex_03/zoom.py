@@ -18,14 +18,14 @@ def main():
             raise AssertionError("Failed to load image.")
 
         print(ft_load(path))
-        plt.imshow(image)
-        plt.title("Original Image")
-        plt.axis('on')
-        plt.show()
+        image.show()
 
         zoomed_image = image.crop((400, 100, 800, 600))
         zoomed_image.save("zoomed_image.jpg")
         print(f"New shape after cropping: {zoomed_image.size}")
+
+        grayscale_image = zoomed_image.convert("L")
+        print(np.array(grayscale_image))
 
         plt.imshow(zoomed_image)
         plt.title("Zoomed Image")
