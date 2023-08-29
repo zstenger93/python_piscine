@@ -12,6 +12,8 @@ def give_bmi(
         list[int | float]: List of calculated BMI values.
     """
     try:
+        if not isinstance(height, list) or not isinstance(weight, list):
+            raise TypeError("Height and weight must be provided as lists.")
         if len(height) != len(weight):
             raise ValueError(
                 "Lists of height and weight must have the same length.")
