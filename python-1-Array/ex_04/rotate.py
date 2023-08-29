@@ -7,6 +7,21 @@ import os
 
 
 def print_rows_firstelem(arr, int):
+    """
+    Print a formatted display of the first elements
+    in each row of a given array.
+
+    Parameters:
+    arr (array-like): The input array containing elements to be displayed.
+    int (int): An integer specifying the display format: 0 for single brackets,
+               1 for triple brackets.
+
+    Iterates through the rows of the input array and displays the first
+    elements of each row in a formatted manner. The display format is
+    determined by the 'int' parameter. For 'int' equal to 0, single
+    brackets are used to enclose the elements, while for 'int' equal
+    to 1, triple brackets are used.
+    """
     count = 0
     for row in arr:
         count += 1
@@ -35,6 +50,20 @@ def print_rows_firstelem(arr, int):
 
 
 def crop_image(image):
+    """
+    Crop the input image to form a square centered within the original image.
+
+    Parameters:
+    image (PIL.Image.Image): The input image to be cropped.
+
+    Returns:
+    PIL.Image.Image: The cropped image in the shape of a square.
+
+    This function takes an input image and calculates the dimensions for
+    cropping a square region that is centered within the original image.
+    The calculated crop dimensions are applied to the input image using
+    the `crop` method, and the resulting cropped image is returned.
+    """
     crp_size = min(image.width, image.height)
     crp_left = (image.width - crp_size) // 2
     crp_top = (image.height - crp_size) // 2
@@ -45,6 +74,21 @@ def crop_image(image):
 
 
 def transpose_image(image):
+    """
+    Transpose the input image by swapping its width and height dimensions.
+
+    Parameters:
+    image (PIL.Image.Image): The input image to be transposed.
+
+    Returns:
+    PIL.Image.Image: The transposed image with swapped width and height
+    dimensions.
+
+    This function iterates through the pixels of the input image,
+    swapping their x and y coordinates to transpose the image. A new
+    image with the transposed dimensions is created, and the pixels
+    are copied to the new image accordingly.
+    """
     width, height = image.size
     transposed_image = Image.new("RGB", (height, width))
 
@@ -57,6 +101,15 @@ def transpose_image(image):
 
 
 def main():
+    """
+    Load, process, and display an image based on command-line arguments.
+
+    This function serves as the main entry point of the script. It loads an
+    image from the command-line argument, performs various image processing
+    operations, and displays the resulting images. The script supports
+    cropping, grayscale conversion, and transposing images. Errors related
+    to file format and existence are caught and displayed.
+    """
     try:
         path = sys.argv[1]
         if not path.lower().endswith(("jpg", "jpeg")):

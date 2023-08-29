@@ -6,6 +6,21 @@ import sys
 import os
 
 def print_rows_firstelem(arr, int):
+    """
+    Print a formatted display of the first elements
+    in each row of a given array.
+
+    Parameters:
+    arr (array-like): The input array containing elements to be displayed.
+    int (int): An integer specifying the display format: 0 for single brackets,
+               1 for triple brackets.
+
+    Iterates through the rows of the input array and displays the first
+    elements of each row in a formatted manner. The display format is
+    determined by the 'int' parameter. For 'int' equal to 0, single
+    brackets are used to enclose the elements, while for 'int' equal
+    to 1, triple brackets are used.
+    """
     count = 0
     for row in arr:
         count += 1
@@ -34,6 +49,15 @@ def print_rows_firstelem(arr, int):
 
 
 def main():
+    """
+    Load, process, and display an image based on command-line arguments.
+
+    This function serves as the main entry point of the script. It loads an
+    image from the command-line argument, performs various image processing
+    operations, and displays the resulting images. The script supports
+    cropping, grayscale conversion, and zoomed image display. Errors related
+    to file format and existence are caught and displayed.
+    """
     try:
         path = sys.argv[1]
         if not path.lower().endswith(("jpg", "jpeg")):
