@@ -1,5 +1,6 @@
 from DiamondTrap import King
 Joffrey = King("Joffrey")
+print(Joffrey.__doc__)
 print(Joffrey.__dict__)
 Joffrey.set_eyes("blue")
 Joffrey.set_hairs("light")

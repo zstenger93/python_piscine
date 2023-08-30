@@ -20,6 +20,7 @@ class Baratheon(Character):
 
 
 class Lannister(Character):
+    """Why rob a bank when you can marry a Lannister and inherit the vault?"""
     def __init__(self, first_name):
         super().__init__(first_name)
         self.family_name = "Lannister"
