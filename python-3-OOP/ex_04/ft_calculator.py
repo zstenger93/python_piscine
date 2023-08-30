@@ -3,10 +3,6 @@ class calculator:
     def dotproduct(V1: list[float], V2: list[float]) -> float:
         """
         Calculate and print the dot product of two vectors.
-
-        Parameters:
-        V1 (list[float]): First vector.
-        V2 (list[float]): Second vector.
         """
         dot_product = 0.0
         for i in V1:  # Assuming V1 and V2 have the same length
@@ -17,10 +13,6 @@ class calculator:
     def add_vec(V1: list[float], V2: list[float]) -> list[float]:
         """
         Add two vectors element-wise and print the result vector.
-
-        Parameters:
-        V1 (list[float]): First vector.
-        V2 (list[float]): Second vector.
         """
         result = []
         for i in V1:  # Assuming V1 and V2 have the same length
@@ -31,10 +23,6 @@ class calculator:
     def sous_vec(V1: list[float], V2: list[float]) -> list[float]:
         """
         Subtract two vectors element-wise and print the result vector.
-
-        Parameters:
-        V1 (list[float]): First vector.
-        V2 (list[float]): Second vector.
         """
         result = []
         for i in V1:  # Assuming V1 and V2 have the same length

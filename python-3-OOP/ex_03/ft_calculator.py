@@ -28,13 +28,8 @@ class calculator:
     
     def __add__(self, scalar):
         """
-        Adds a scalar value to each element of the vector.
-        
-        Args:
-            scalar: The scalar value to be added.
-            
         Returns:
-            list: The resulting vector after addition.
+            The resulting vector after addition.
         """
         self.vector = [x + scalar for x in self.vector]
         print(self.vector)
@@ -42,13 +37,8 @@ class calculator:
     
     def __mul__(self, scalar):
         """
-        Multiplies each element of the vector by a scalar value.
-        
-        Args:
-            scalar: The scalar value to be multiplied.
-            
         Returns:
-            list: The resulting vector after multiplication.
+            The resulting vector after multiplication.
         """
         self.vector = [x * scalar for x in self.vector]
         print(self.vector)
@@ -56,13 +46,8 @@ class calculator:
     
     def __sub__(self, scalar):
         """
-        Subtracts a scalar value from each element of the vector.
-        
-        Args:
-            scalar: The scalar value to be subtracted.
-            
         Returns:
-            list: The resulting vector after subtraction.
+            The resulting vector after subtraction.
         """
         self.vector = [x - scalar for x in self.vector]
         print(self.vector)
@@ -70,13 +55,8 @@ class calculator:
     
     def __truediv__(self, scalar):
         """
-        Divides each element of the vector by a scalar value.
-        
-        Args:
-            scalar: The scalar value to be used for division.
-            
         Returns:
-            list: The resulting vector after division.
+            The resulting vector after division.
             
         Raises:
             ZeroDivisionError: If the scalar value is 0.
