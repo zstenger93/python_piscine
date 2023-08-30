@@ -16,6 +16,8 @@ def preprocess_population(pop_str):
     """
     if pop_str.endswith("M"):
         return float(pop_str[:-1]) * 1e6
+    elif pop_str.endswith("k"):
+        return float(pop_str[:-1]) * 1e3
     else:
         return float(pop_str)
 
