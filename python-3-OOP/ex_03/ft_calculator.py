@@ -37,6 +37,7 @@ class calculator:
             list: The resulting vector after addition.
         """
         self.vector = [x + scalar for x in self.vector]
+        print(self.vector)
         return [x for x in self.vector]
     
     def __mul__(self, scalar):
@@ -50,6 +51,7 @@ class calculator:
             list: The resulting vector after multiplication.
         """
         self.vector = [x * scalar for x in self.vector]
+        print(self.vector)
         return [x for x in self.vector]
     
     def __sub__(self, scalar):
@@ -63,6 +65,7 @@ class calculator:
             list: The resulting vector after subtraction.
         """
         self.vector = [x - scalar for x in self.vector]
+        print(self.vector)
         return [x for x in self.vector]
     
     def __truediv__(self, scalar):
@@ -81,4 +84,5 @@ class calculator:
         if scalar == 0:
             raise ZeroDivisionError("Division by zero is not allowed.")
         self.vector = [x / scalar for x in self.vector]
+        print(self.vector)
         return [x for x in self.vector]
