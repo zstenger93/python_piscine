@@ -6,11 +6,11 @@ def preprocess_population(pop_str):
     """
     Preprocesses the population string to convert it into
     a numeric value in standard form.
-    
+
     Args:
         pop_str (str): Population string with or without
         the 'M' suffix for million.
-        
+
     Returns:
         float: Numeric population value.
     """

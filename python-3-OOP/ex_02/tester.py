@@ -1,4 +1,6 @@
 from DiamondTrap import King
+
+
 Joffrey = King("Joffrey")
 print(Joffrey.__doc__)
 print(Joffrey.__dict__)

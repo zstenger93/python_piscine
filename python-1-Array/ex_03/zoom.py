@@ -5,6 +5,7 @@ import numpy as np
 import sys
 import os
 
+
 def print_rows_firstelem(arr, int):
     """
     Print a formatted display of the first elements
@@ -35,14 +36,14 @@ def print_rows_firstelem(arr, int):
         if count > 0 and count < 3 or count > length - 4:
             if int == 1:
                 if count == length - 1:
-                    print("  [" ,row[0], "]]]", sep="")
+                    print("  [", row[0], "]]]", sep="")
                 elif count < length - 1:
-                    print("  [" ,row[0], "]", sep="")
+                    print("  [", row[0], "]", sep="")
             else:
                 if count == length - 1:
-                    print("  " ,row[0], "]]", sep="")
+                    print("  ", row[0], "]]", sep="")
                 else:
-                    print("  " ,row[0], sep="")
+                    print("  ", row[0], sep="")
         if count == 2:
             print("  ...")
         count += 1

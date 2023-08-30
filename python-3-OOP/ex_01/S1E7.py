@@ -1,8 +1,9 @@
 from S1E9 import Character
 
+
 class Baratheon(Character):
     """Representing the Baratheon family."""
-    
+
     def __init__(self, first_name):
         """
         Initialize a Baratheon character with the provided first name.
@@ -34,9 +35,10 @@ class Baratheon(Character):
         """
         return self.__str__()
 
+
 class Lannister(Character):
     """Why rob a bank when you can marry a Lannister and inherit the vault?"""
-    
+
     def __init__(self, first_name):
         """
         Initialize a Lannister character with the provided first name.

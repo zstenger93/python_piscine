@@ -1,12 +1,17 @@
 import subprocess
 
+
 def test_morse_encoder(input_text, expected_output):
     try:
-        output = subprocess.check_output(["python3.10", "sos.py", input_text], stderr=subprocess.STDOUT, text=True)
+        output = subprocess.check_output(["python3.10", "sos.py", input_text],
+                                         stderr=subprocess.STDOUT, text=True)
         assert output.strip() == expected_output.strip()
-        print(f"Test passed: Input: '{input_text}', \nExpected: '{expected_output}', \nOutput: '{output.strip()}'\n")
+        print(f"Test passed: Input: '{input_text}'")
+        print(f"Expected: '{expected_output}', \nOutput: '{output.strip()}'\n")
     except subprocess.CalledProcessError as e:
-        print(f"Test failed: Input: '{input_text}', \nExpected: '{expected_output}', \nError: {e.output.strip()}\n")
+        print(f"Test failed: Input: '{input_text}'")
+        print(f"Expected: '{expected_output}', \nError: {e.output.strip()}\n")
+
 
 if __name__ == "__main__":
     test_cases = [
