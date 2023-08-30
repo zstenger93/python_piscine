@@ -13,7 +13,7 @@ def format_func(value, tick_number):
 
 def main():
     """
-    This function loads data for Gross National Product (GNP) per capita
+    Loads data for Gross National Product (GNP) per capita
     and life expectancy from separate CSV files. It focuses on data from
     the year 1900 and visualizes the correlation between GNP and life
     expectancy through a scatter plot.
