@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 
 def load(path: str):
@@ -20,9 +21,13 @@ def load(path: str):
     If there is an error (e.g., bad path, bad format), None is returned.
     """
     try:
+        if not os.path.exists(path):
+            raise AssertionError("The file doesnt exist")
+        if not path.lower().endswith('.csv'):
+            raise AssertionError("The file fromat is not .csv")
         dataset = pd.read_csv(path)
         print(f"Loading dataset of dimensions {dataset.shape}")
         return dataset
-    except Exception as error:
-        print("Error:", error)
-        return None
+    except AssertionError as error:
+        print(AssertionError.__name__ + ":", error)
+        exit()
