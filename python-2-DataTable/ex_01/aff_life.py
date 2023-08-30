@@ -21,10 +21,10 @@ def main():
     plt.title('Life Expectancy in Germany Over the Years')
     plt.xlabel('Year')
     plt.ylabel('Life Expectancy')
-    plt.xticks(years[::40], rotation=45)  # Display every 40 years
+    plt.xticks(years[::40], rotation=45)
     plt.legend()
     plt.grid()
-    plt.tight_layout()  # Ensures labels fit nicely
+    plt.tight_layout()
     plt.show()
 
 

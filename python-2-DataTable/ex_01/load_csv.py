@@ -20,14 +20,9 @@ def load(path: str):
     If there is an error (e.g., bad path, bad format), None is returned.
     """
     try:
-        # Load the CSV dataset
         dataset = pd.read_csv(path)
-
-        # Print the dimensions of the dataset
         print(f"Loading dataset of dimensions {dataset.shape}")
-
         return dataset
-
     except Exception as error:
         print("Error:", error)
         return None
