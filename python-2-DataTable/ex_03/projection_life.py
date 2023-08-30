@@ -36,6 +36,8 @@ def main():
     plt.title("Life expectancy vs Gross domestic product (Year 1900)")
     plt.xlabel("Gross domestic product")
     plt.ylabel("Life expectancy (Years)")
+    plt.xscale("log")
+    plt.xticks(ticks=[300, 1000, 10000], labels=['300', '1k', '10k'])
     plt.grid(True)
     plt.tight_layout()
     plt.show()
