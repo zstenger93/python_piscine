@@ -16,9 +16,6 @@ class Character(ABC):
         """
         self.first_name = first_name
         self.is_alive = is_alive
-        self.family_name = ""
-        self.eyes = ""
-        self.hairs = ""
 
     def die(self):
         """
