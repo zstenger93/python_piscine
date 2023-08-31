@@ -3,11 +3,8 @@ from S1E7 import Baratheon, Lannister
 
 class King(Baratheon, Lannister):
     """The mad King himself"""
-    def __init__(self, first_name):
-        super().__init__(first_name)
-        baratheon_instance = Baratheon(first_name)
-        self.family_name = baratheon_instance.first_name
-        self.first_name = first_name
+    def __init__(self, first_name, is_alive=True):
+        super().__init__(first_name, is_alive)
 
     def set_eyes(self, color):
         self.eyes = color
