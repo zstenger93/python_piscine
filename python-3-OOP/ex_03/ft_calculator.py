@@ -62,8 +62,11 @@ class calculator:
         Raises:
             ZeroDivisionError: If the scalar value is 0.
         """
-        if scalar == 0:
-            raise ZeroDivisionError("Division by zero is not allowed.")
-        self.vector = [x / scalar for x in self.vector]
-        print(self.vector)
-        return [x for x in self.vector]
+        try:
+            if scalar == 0:
+                raise ZeroDivisionError("Division by zero is not allowed.")
+            self.vector = [x / scalar for x in self.vector]
+            print(self.vector)
+            return [x for x in self.vector]
+        except ZeroDivisionError as error:
+            print(ZeroDivisionError.__name__ + ":", error)
