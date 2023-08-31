@@ -1,14 +1,5 @@
 from load_csv import load
 import matplotlib.pyplot as plt
-import matplotlib.ticker as mticker
-
-
-def format_func(value, tick_number):
-    """
-    formatting the x output to 2k instead of 2000
-    """
-    k_value = int(value) / 1000
-    return f"{k_value:.0f}k"
 
 
 def main():
@@ -31,7 +22,6 @@ def main():
     life_expectancy_1900 = life_expectancy_data[year_1900_column]
 
     plt.figure(figsize=(10, 6))
-    plt.gca().xaxis.set_major_formatter(mticker.FuncFormatter(format_func))
     plt.scatter(gnp_1900, life_expectancy_1900)
     plt.title("Life expectancy vs Gross domestic product (Year 1900)")
     plt.xlabel("Gross domestic product")
