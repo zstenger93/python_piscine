@@ -41,10 +41,9 @@ def outer(x: int | float, function) -> object:
     function (function): The function to be applied for calculations.
 
     Returns:
-    object: A callable object (counter function) that calculates and updates the value.
+    object: A callable object (counter function) that
+    calculates and updates the value.
     """
-    count = 0
-    
     def inner() -> float:
         """
         Execute the provided function, update the value, and return the result.
@@ -54,18 +53,17 @@ def outer(x: int | float, function) -> object:
         2. Update the input value with the result of the calculation.
         3. Increment the internal counter to keep track of the number of calls.
         4. Return the result of the calculation.
-        
+
         Nonlocal:
         Used to modify a variable in the nearest enclosing scope that's
         not the global scope. It allows you to work with variables from
         a parent (enclosing) function's scope.
 
         Returns:
-        float: The result of the calculation performed by the provided function.
+        float: The result of the calculation performed by the provided function
         """
         nonlocal x
         result = function(x)
         x = result
         return result
-    
     return inner
