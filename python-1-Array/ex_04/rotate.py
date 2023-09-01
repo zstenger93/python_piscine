@@ -127,9 +127,11 @@ def main():
         print_rows_firstelem(np.array(square_crop.convert("L")), 1)
 
         transposed_image = transpose_image(square_crop)
-        transposed_image.show()
-        print(f"New shape after Transpose: {transposed_image.size}")
         print(np.array(transposed_image.convert("L")))
+        transposed_image.show()
+        mirrored_image = transposed_image.transpose(Image.FLIP_LEFT_RIGHT)
+        mirrored_image.show()
+        print(f"New shape after Transpose: {transposed_image.size}")
 
         plt.imshow(transposed_image)
         plt.title("Transposed Image")
