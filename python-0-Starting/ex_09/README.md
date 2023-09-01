@@ -1,30 +1,30 @@
 # The Package
 
-## Build the package with
+## Build
 
 ```
 python setup.py sdist bdist_wheel
 ```
 
-## Install the package with
+## Install
 
 ```
 pip3 install ./dist/ft_package-0.0.1.tar.gz
 ```
 
-## Display the package with
+## Display
 
 ```
 pip3 show -v ft_package
 ```
 
-## Test the package with
+## Test
 
 ```
 python3.10 tester.py
 ```
 
-## Uninstall with
+## Uninstall
 
 ```
 pip3 uninstall ft_package
