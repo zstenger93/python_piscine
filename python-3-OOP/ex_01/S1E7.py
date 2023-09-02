@@ -53,6 +53,9 @@ class Lannister(Character):
         Parameters:
             first_name (str): The first name of the character.
             is_alive (bool): The status of the character's life.
+            cls refers to the class itself, a method that is defined on a
+            class and can be called on the class itself,
+            without creating an instance of the class.
 
         Returns:
             Lannister: An instance of the Lannister character.
