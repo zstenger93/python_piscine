@@ -34,7 +34,7 @@ def slice_me(family: list, start: int, end: int) -> list:
             raise AssertionError("Input list with different sizes.")
         print(f"My shape is : {np.array(family).shape}")
         print(f"My new shape is : {np.array(family)[start:end+1].shape}")
-        return np.array(family)[start:end+1].tolist()
+        return np.array(family)[start:end].tolist()
     except AssertionError as error:
         print("\033[31m", AssertionError.__name__ + ":", error, "\033[0m")
         return ""
