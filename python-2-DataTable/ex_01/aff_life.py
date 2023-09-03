@@ -17,13 +17,13 @@ def main():
     years = germany_data.columns[1:]
     life_expectancy = germany_data.values[0][1:]
 
-    plt.plot(years, life_expectancy, marker='o', label='Germany')
+    plt.plot(years, life_expectancy, label='Germany')
     plt.title('Life Expectancy in Germany Over the Years')
     plt.xlabel('Year')
-    plt.ylabel('Life Expectancy')
     plt.xticks(years[::40], rotation=45)
+    plt.ylabel('Life Expectancy')
+    plt.yticks(range(30, 101, 10))
     plt.legend()
-    plt.grid()
     plt.tight_layout()
     plt.show()
 

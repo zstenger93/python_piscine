@@ -42,7 +42,7 @@ def main():
     france_pop = france_data.values.flatten()
     hungary_pop = hungary_data.values.flatten()
     years = germany_data.columns.astype(int)
-
+   
     germany_pop = [preprocess_population(pop) for pop in germany_pop]
     france_pop = [preprocess_population(pop) for pop in france_pop]
     hungary_pop = [preprocess_population(pop) for pop in hungary_pop]
@@ -53,13 +53,14 @@ def main():
 
     plt.title("Population in {}, {} and {}".format(campus, country, home))
     plt.xlabel("Year")
+    plt.xticks(range(1800, 2051, 40), range(1800, 2051, 40))
+    plt.xlim(1800, 2040)
     plt.ylabel("Population")
     plt.legend()
     plt.tight_layout()
     max_pop = max(max(germany_pop), max(france_pop), max(hungary_pop))
     y_ticks = [i * 1e7 for i in range(int(max_pop / 1e7) + 1)]
     plt.yticks(y_ticks, ["{:,.0f}M".format(pop / 1e6) for pop in y_ticks])
-    plt.grid(True)
     plt.show()
 
 
