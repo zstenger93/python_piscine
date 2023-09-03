@@ -12,8 +12,8 @@ def give_bmi(
         list[int | float]: List of calculated BMI values.
     """
     try:
-        if not isinstance(height, list) or not isinstance(weight, list):
-            raise TypeError("Height and weight must be provided as lists.")
+        # if not isinstance(height, list) or not isinstance(weight, list):
+        #     raise TypeError("Height and weight must be provided as lists.")
         if len(height) != len(weight):
             raise ValueError(
                 "Lists of height and weight must have the same length.")
@@ -46,10 +46,8 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         each BMI value is above the limit.
     """
     try:
-        if not isinstance(bmi, list) or not isinstance(limit, list):
-            raise TypeError("Height and weight must be provided as lists.")
-        if not isinstance(limit, int):
-            raise TypeError("Limit must be an integer.")
+        if not isinstance(limit, float) and not isinstance(limit, int):
+            raise TypeError("Limit must be provided as int or float.")
         above_limit = []
         for value in bmi:
             if not isinstance(value, (int, float)):

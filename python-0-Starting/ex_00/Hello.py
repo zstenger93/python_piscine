@@ -13,7 +13,6 @@ print("\n")
 # your code here
 
 ft_list[1] = "World!"
-
 ft_tuple = ("Hello", "Germany!")
 
 ft_set.remove("tutu!")
