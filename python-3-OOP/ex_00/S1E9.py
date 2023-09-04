@@ -30,23 +30,26 @@ class Character(ABC):
 class Stark(Character):
     """Class representing a Stark character."""
     def __init__(self, first_name, is_alive=True):
+        """
+        Stark character has been created
+        """
         self.first_name = first_name
         self.is_alive = is_alive
 
     def die(self):
         """
-        In halls of red, a joyous feast did bloom,
-        Yet shadows hid the doom, impending gloom.
-        Alliances shattered, trust cruelly unfurled,
-        A wedding turned to massacre, a treacherous world.
+            In halls of red, a joyous feast did bloom,
+            Yet shadows hid the doom, impending gloom.
+            Alliances shattered, trust cruelly unfurled,
+            A wedding turned to massacre, a treacherous world.
 
-        Robb's honor, Catelyn's plea, all in vain,
-        The Rains of Castamere sang a deadly refrain.
-        Beneath the banners, life's river ran cold,
-        The Red Wedding's tale, a tragic story told.
-        Change the health state of the Stark character to False.
+            Robb's honor, Catelyn's plea, all in vain,
+            The Rains of Castamere sang a deadly refrain.
+            Beneath the banners, life's river ran cold,
+            The Red Wedding's tale, a tragic story told.
+            Change the health state of the Stark character to False.
 
-        This method overrides the abstract method from the base class and
-        updates the is_alive attribute to False.
+            This method overrides the abstract method from the base class and
+            updates the is_alive attribute to False.
         """
         self.is_alive = False

@@ -1,7 +1,7 @@
 class calculator:
     """
     A calculator class for performing arithmetic operations between
-    a vector and a scalar.
+    a vector and a object.
 
     Attributes:
         vector (list): The vector on which operations will be performed.
@@ -9,13 +9,13 @@ class calculator:
     Methods:
         __init__(self, vector): Init the calculator with the provided vector.
 
-        __add__(self, scalar): + a scalar value to each element of the vec.
+        __add__(self, object): + a object value to each element of the vec.
 
-        __mul__(self, scalar): * each element of the vector by a scalar value.
+        __mul__(self, object): * each element of the vector by a object value.
 
-        __sub__(self, scalar): - a scalar value from each element of the vector
+        __sub__(self, object): - a object value from each element of the vector
 
-        __truediv__(self, scalar): / each element of the vector by a scalar val
+        __truediv__(self, object): / each element of the vector by a object val
     """
 
     def __init__(self, vector):
@@ -27,45 +27,45 @@ class calculator:
         """
         self.vector = vector
 
-    def __add__(self, scalar):
+    def __add__(self, object) -> None:
         """
         Returns:
             The resulting vector after addition.
         """
-        self.vector = [x + scalar for x in self.vector]
+        self.vector = [x + object for x in self.vector]
         print(self.vector)
         return [x for x in self.vector]
 
-    def __mul__(self, scalar):
+    def __mul__(self, object) -> None:
         """
         Returns:
             The resulting vector after multiplication.
         """
-        self.vector = [x * scalar for x in self.vector]
+        self.vector = [x * object for x in self.vector]
         print(self.vector)
         return [x for x in self.vector]
 
-    def __sub__(self, scalar):
+    def __sub__(self, object) -> None:
         """
         Returns:
             The resulting vector after subtraction.
         """
-        self.vector = [x - scalar for x in self.vector]
+        self.vector = [x - object for x in self.vector]
         print(self.vector)
         return [x for x in self.vector]
 
-    def __truediv__(self, scalar):
+    def __truediv__(self, object) -> None:
         """
         Returns:
             The resulting vector after division.
 
         Raises:
-            ZeroDivisionError: If the scalar value is 0.
+            ZeroDivisionError: If the object value is 0.
         """
         try:
-            if scalar == 0:
+            if object == 0:
                 raise ZeroDivisionError("Division by zero is not allowed.")
-            self.vector = [x / scalar for x in self.vector]
+            self.vector = [x / object for x in self.vector]
             print(self.vector)
             return [x for x in self.vector]
         except ZeroDivisionError as error:

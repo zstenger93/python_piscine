@@ -42,7 +42,7 @@ def main():
     france_pop = france_data.values.flatten()
     hungary_pop = hungary_data.values.flatten()
     years = germany_data.columns.astype(int)
-   
+
     germany_pop = [preprocess_population(pop) for pop in germany_pop]
     france_pop = [preprocess_population(pop) for pop in france_pop]
     hungary_pop = [preprocess_population(pop) for pop in hungary_pop]
