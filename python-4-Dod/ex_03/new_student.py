@@ -33,7 +33,7 @@ class Student:
     """
     name: str = field(init=True)
     surname: str = field(init=True)
-    active: bool = True
+    active: bool = field(default=True)
     login: str = field(init=False)
     id: str = field(init=False, default=generate_id())
 
