@@ -143,41 +143,13 @@ you don’t have to use them all)
 
 ### Exercise 00
 
+Simply learn how to load a database from a csv file
 
+### Exercise 01, 02, 03
 
-### Exercise 01
-
-
-
-### Exercise 02
-
-
-
-### Exercise 03
-
-
-
+Here we had to create 3 diagramm about different parts of the data, 2 plot and 1 scatter
 
 ## Day 4: OOP
-
-### Exercise 00
-
-
-
-### Exercise 01
-
-
-
-### Exercise 02
-
-
-
-### Exercise 03
-
-
-
-### Exercise 04
-
 
 
 
