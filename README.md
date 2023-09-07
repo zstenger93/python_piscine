@@ -161,11 +161,11 @@ Statistic and kwargs
 
 ### Exercise 01
 
-
+inner functions, nonlocal variables
 
 ### Exercise 02
 
-
+Kinda same as 01 with extra functionality
 
 ### Exercise 03
 
